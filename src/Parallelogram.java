@@ -1,4 +1,5 @@
 public interface Parallelogram {
-    public int area();
-    public int perimeter();
+    int area();
+
+    int perimeter();
 }

@@ -7,10 +7,12 @@ public class Rectangle implements Parallelogram {
         this.width = width;
     }
 
+    @Override
     public int area() {
         return length * width;
     }
 
+    @Override
     public int perimeter() {
         return 2 * (length + width);
     }
