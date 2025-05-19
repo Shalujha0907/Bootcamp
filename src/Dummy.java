@@ -7,4 +7,5 @@ public class Dummy {
     public String printBye() {
         return "Bye and goodbye!";
     }
+
 }
