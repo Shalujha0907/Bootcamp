@@ -25,6 +25,10 @@ public  class Probability {
         return new Probability(chance * p2.chance);
     }
 
+    public Probability or(Probability p2) {
+        return new Probability(chance + p2.chance - (chance * p2.chance));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Probability)) return false;
@@ -36,5 +40,4 @@ public  class Probability {
     public int hashCode() {
         return Objects.hashCode(chance);
     }
-
 }
