@@ -9,15 +9,15 @@ public  class Probability {
         this.chance = chance;
     }
 
-    public static Probability initialise(double chance) throws Exception {
+    public static Probability initialise(double chance) throws InvalidError {
         if (chance < 0 || chance > 1) {
-            throw new Exception("Invalid Chance");
+            throw new InvalidError();
         }
 
         return new Probability(chance);
     }
 
-    public static Probability complement(double chance) throws Exception {
+    public static Probability complement(double chance) throws InvalidError {
     return  Probability.initialise(1 - chance);
     }
 

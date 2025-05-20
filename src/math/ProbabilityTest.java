@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProbabilityTest {
     @Test
-    void probability() throws Exception {
-      assertThrows(Exception.class, () -> Probability.initialise(-2));
+    void probability() throws InvalidError {
+      assertThrows(InvalidError.class, () -> Probability.initialise(-2));
       assertEquals(Probability.initialise(0.75), Probability.complement(0.25));
       assertEquals(Probability.initialise(0.5), Probability.complement(0.5));
     }
